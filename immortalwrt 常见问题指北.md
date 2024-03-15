@@ -21,7 +21,7 @@
 
 ### 1. 为什么我用不了SSRP
 
-在23.0版本之后我们使用了nftable替换了iptable，所以一些使用iptables的插件无法使用了。
+在23.0版本之后我们使用了nftables替换了iptables，所以一些使用iptables的插件无法使用了。
 
 ### 2. 我的passwall有问题
 
