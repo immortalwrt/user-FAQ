@@ -53,3 +53,19 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 ### 12. 如何开启UPNP
 
 请确保您拥有公网IPV4地址的情况下在服务-UPNP里勾选 启动 UPnP 与 NAT-PMP 服务 启用之后列表里不显示已经打洞成功的程序属正常现象。
+
+### 13. 为什么我找不到wireguard了
+
+在新版本的内核中，luci-app-wireguard已被合并为内核模块，请在编译/构建的时候添加以下软件包
+```
+wireguard-tools
+kmod-wireguard
+luci-proto-wireguard
+```
+
+### 14. 当Wireguard的服务器端是动态IP我应该怎么配置自动更新对端IP呢？
+
+客户端配置好wireguard之后在 **系统-计划任务** 里面添加
+```
+*/2 * * * * /usr/bin/wireguard_watchdog
+```
