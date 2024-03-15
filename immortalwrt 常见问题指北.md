@@ -42,7 +42,7 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 9. 我编译出错了
 
-我们不建议新手用户自行编译使用immortalwrt。请使用imagebulider在线构建:fwselector.kyarucloud.moe
+我们不建议新手用户自行编译使用immortalwrt。请使用imagebulider在线构建:<https://fwselector.kyarucloud.moe>
 
 10. 我家里的苹果设备耗电快
 
