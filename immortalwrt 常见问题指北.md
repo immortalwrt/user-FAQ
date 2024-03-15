@@ -20,7 +20,7 @@ Passwall的使用问题并不在本群的支持范围，请访问passwall社区�
 
 ### 5. 如何优雅的使用IPV6？
 
-如图所示
+如图所示  
 ![Alt text](/img/image.png)
 ![Alt text](/img/image-1.png)
 ### 6. IPV6如何正确配置端口转发？
