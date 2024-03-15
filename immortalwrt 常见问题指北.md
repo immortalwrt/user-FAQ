@@ -29,6 +29,8 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ![Alt text](/img/image-2.png)
 
+关于eui64的一些说明 <https://github.com/immortalwrt/user-FAQ/blob/main/immortalwrt%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8C%87%E5%8C%97.md>
+
 ### 7. 我应当在路由器上开启bbr吗？
 
 不应当
