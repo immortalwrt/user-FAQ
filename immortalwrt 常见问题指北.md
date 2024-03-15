@@ -76,7 +76,11 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ### 12. 如何开启UPNP
 
-请确保您拥有公网IPV4地址的情况下在服务-UPNP里勾选 启动 UPnP 与 NAT-PMP 服务 启用之后列表里不显示已经打洞成功的程序属正常现象。
+请确保您拥有公网IPV4地址的情况下在服务-UPNP里勾选 **启动 UPnP 与 NAT-PMP 服务** 
+
+> [!NOTE]
+> 启用之后列表里不显示已经打洞成功的程序属**正常现象**。
+
 
 ### 13. 为什么我找不到wireguard了
 
@@ -93,3 +97,9 @@ luci-proto-wireguard
 ```
 */2 * * * * /usr/bin/wireguard_watchdog
 ```
+
+### 15. 为什么我在DDNS插件里找不到我的提供商？
+请在 **系统-软件包**  里搜索 **ddns-scripts-提供商名字** 例如 **ddns-scripts-cloudflare**
+
+> [!NOTE]
+> 如果更新后也搜不到，那证明确实不支持。
