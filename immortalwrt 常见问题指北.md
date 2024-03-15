@@ -99,7 +99,7 @@ luci-proto-wireguard
 ```
 
 ### 15. 为什么我在DDNS插件里找不到我的提供商？
-请在 **系统-软件包**  里搜索 **ddns-scripts-提供商名字** 例如 **ddns-scripts-cloudflare**
+请在 **系统-软件包**  里搜索并安装 **ddns-scripts-提供商名字** 例如 **ddns-scripts-cloudflare**
 
 > [!NOTE]
 > 如果更新后也搜不到，那证明确实不支持。
