@@ -19,6 +19,8 @@ Passwall的使用问题并不在本群的支持范围，请访问passwall社区�
 请不保留配置完全干净的重新刷入一个不包含任何MWAN和多拨插件的固件。
 
 ### 5. 如何优雅的使用IPV6？
+> [!WARNING]
+> 请使用专门针对国内IPV6环境进行优化后的 immortalwrt 23.05.1以及更新的版本
 
 如图所示  
 ![Alt text](/img/image.png)
