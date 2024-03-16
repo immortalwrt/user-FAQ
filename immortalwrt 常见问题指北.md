@@ -25,7 +25,7 @@
 
 ### 2. 我的passwall有问题
 
-Passwall的使用问题并不在本群的支持范围，请访问passwall社区获取更多帮助。<https://github.com/xiaorouji/openwrt-passwall/issues>
+Passwall的使用问题并不在本群的支持范围，请访问passwall社区获取更多帮助。 [xiaorouji/openwrt-passwall/issues](https://github.com/xiaorouji/openwrt-passwall/issues)
 
 ### 3. 我的设备莫名重启
 
@@ -60,8 +60,7 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ### 9. 我编译出错了
 
-我们不建议新手用户自行编译使用immortalwrt。请使用imagebulider在线构建:<https://fwselector.kyarucloud.moe>
-具体使用教程请参阅<https://github.com/1715173329/blog/issues/9>
+我们不建议新手用户自行编译使用immortalwrt。请使用 [imagebulider 在线构建](https://fwselector.kyarucloud.moe) 。<br> 请在此查看 [具体使用教程](https://github.com/1715173329/blog/issues/9) 。
 
 ### 10. 我家里的苹果设备耗电快
 
