@@ -40,6 +40,7 @@ Passwall的使用问题并不在本群的支持范围，请访问passwall社区�
 > 请使用专门针对国内IPV6环境进行优化后的 immortalwrt 23.05.1以及更新的版本
 
 如图所示
+
 ![Alt text](/img/image.png)
 ![Alt text](/img/image-1.png)
 ### 6. IPV6如何正确配置端口转发？
@@ -116,4 +117,4 @@ luci-proto-wireguard
 
 如果您的网络环境无法访问我们提供的链接，您可以使用以下镜像仓库。**请注意 ImmortalWrt 不对以下镜像源负责。**
 
-[ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrors.cernet.edu.cn/immortalwrt)
+[ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrorz.org/immortalwrt/)
