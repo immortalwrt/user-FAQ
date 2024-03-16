@@ -116,4 +116,4 @@ luci-proto-wireguard
 
 如果您的网络环境无法访问我们提供的链接，您可以使用以下镜像仓库。**请注意 ImmortalWrt 不对以下镜像源负责。**
 
-[ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrors.cernet.edu.cn/immortalwrt)
+[ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrorz.org/immortalwrt)
