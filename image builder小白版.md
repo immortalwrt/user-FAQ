@@ -27,7 +27,7 @@ sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bis
   python3-docutils python3-pyelftools qemu-utils re2c rsync scons squashfs-tools subversion swig \
   texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 ```
-安装完成后，使用`wget`命令将目标架构所需要的目标image builder下载到/home/Downloads文件夹下。大多数人都是用桌面版的Ubuntu，所以在文件管理器内的Downloads文件夹内用鼠标右键点击开启Terminal（命令行）粘贴下面的命令
+安装完成后，使用`wget`命令将目标架构所需要的目标image builder下载到/home/Downloads文件夹下。大多数人都是用桌面版的Ubuntu，所以在文件管理器内的Downloads文件夹内用鼠标右键点击开启Terminal（命令行）粘贴下面的命令（以X86-X64设备为例）
 ```
 wget https://downloads.immortalwrt.org/releases/23.05.1/targets/x86/64/immortalwrt-imagebuilder-23.05.1-x86-64.Linux-x86_64.tar.xz
 ```
@@ -54,5 +54,26 @@ image:
 	make image ADD_LOCAL_KEY=1 # store locally generated signing key in built images
 	make image ROOTFS_PARTSIZE="<size>" # override the default rootfs partition size in MegaBytes
 上面的命令中使用`make image PACKAGES`和`make image ROOTFS_PARTSIZE`。\
-举例：`make image PACKAGES="kmod-alx luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"` \
-说明：双引号内的是需要安装或删除的插件。`-kmod-r8125`是删除8125驱动，`-`就是删除，不带`-`就是增加，800是rootfs分区大小是800MB（不严谨的说就是固件大小）。举例给出的命令在虚拟机和Linux物理机内同样适用。
+举例：`make image PACKAGES="luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"` \
+说明：双引号内的是需要安装或删除的插件。`-kmod-r8125`是删除8125驱动，`-`就是删除，不带`-`就是增加，800是rootfs分区大小是800MB（不严谨的说就是固件大小）。举例给出的命令在虚拟机和Linux物理机内同样适用。\
+举例：常用的插件名称（带语言包）：
+```
+luci-i18n-passwall-zh-cn #passwall
+luci-i18n-homeproxy-zh-cn # HP
+luci-i18n-diskman-zh-cn #磁盘管理
+luci-i18n-dockerman-zh-cn #docker管理
+luci-i18n-mwan3-zh-cn #多拨
+luci-i18n-nlbwmon-zh-cn #流量统计
+luci-i18n-samba4-zh-cn #文件共享
+luci-i18n-smartdns-zh-cn #smartdns
+luci-i18n-transmission-zh-cn #BT or PT
+luci-i18n-upnp-zh-cn #公网映射 
+luci-i18n-zerotier-zh-cn # zerotier
+```
+插件名称的规律,带语言包的是：`luci-i18n-xxx-zh-cn`；不带语言包的是：`luci-app-xxx`，插件的依赖有能力的需要自己去查插件的`makefile`\
+举个例子：
+```
+make image PACKAGES="luci-i18n-passwall-zh-cn luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"
+```
+说明：800MB带passwall，不带8125驱动的x86-64固件\
+[immortalwrt插件清单](https://downloads.immortalwrt.org/releases/23.05.1/packages/x86_64/)内的`base` `luci` `pakcages`基本上包含了所需要的插件，在这三个里面找不到的就是没有。
