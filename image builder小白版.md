@@ -1,7 +1,7 @@
 **<sup>推荐</sup> 在线构建网址：(https://firmware-selector.immortalwrt.org 或 https://fwselector.kyarucloud.moe)**
 > 详细教程：(https://github.com/1715173329/blog/issues/9）
 
-使用[GitHub actions](https://github.com/science2468/immortalwrt-IB/blob/main/.github/workflows/immortalwrt-imagebuilder-x64.yml)或者在虚拟机（Linux物理机）内使用image builder编译生成的固件可以设置固件大小。 **必须在非ROOT环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、H28K 等等）。** 
+在虚拟机（Linux物理机）内使用image builder编译生成的固件可以设置固件大小。 **必须在非ROOT环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、H28K 等等）。** 
 >参考命令：https://github.com/openwrt/openwrt/blob/master/target/imagebuilder/files/Makefile \
 >参考文档：https://openwrt.org/docs/guide-user/additional-software/imagebuilder
 
@@ -58,10 +58,8 @@ image:
 说明：双引号内的是需要安装或删除的插件。`-kmod-r8125`是删除8125驱动，`-`就是删除，不带`-`就是增加，800是rootfs分区大小是800MB（不严谨的说就是固件大小）。举例给出的命令在虚拟机和Linux物理机内同样适用。\
 举例：常用的插件名称（带语言包）：
 ```
-luci-i18n-passwall-zh-cn #passwall
 luci-i18n-homeproxy-zh-cn # HP
 luci-i18n-diskman-zh-cn #磁盘管理
-luci-i18n-dockerman-zh-cn #docker管理
 luci-i18n-mwan3-zh-cn #多拨
 luci-i18n-nlbwmon-zh-cn #流量统计
 luci-i18n-samba4-zh-cn #文件共享
