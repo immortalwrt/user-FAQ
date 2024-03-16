@@ -39,7 +39,7 @@ Passwall的使用问题并不在本群的支持范围，请访问passwall社区�
 > [!TIP]
 > 请使用专门针对国内IPV6环境进行优化后的 immortalwrt 23.05.1以及更新的版本
 
-如图所示  
+如图所示
 ![Alt text](/img/image.png)
 ![Alt text](/img/image-1.png)
 ### 6. IPV6如何正确配置端口转发？
@@ -48,7 +48,7 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ![Alt text](/img/image-2.png)
 
-关于eui64的一些说明 <https://github.com/immortalwrt/user-FAQ/blob/main/%E5%85%B3%E4%BA%8Eeui64%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E.md>
+[**关于eui64的一些说明**](./关于eui64的一些说明.md)
 
 ### 7. 我应当在路由器上开启bbr吗？
 
@@ -60,7 +60,7 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ### 9. 我编译出错了
 
-我们不建议新手用户自行编译使用immortalwrt。请使用imagebulider在线构建:<https://fwselector.kyarucloud.moe>   
+我们不建议新手用户自行编译使用immortalwrt。请使用imagebulider在线构建:<https://fwselector.kyarucloud.moe>
 具体使用教程请参阅<https://github.com/1715173329/blog/issues/9>
 
 ### 10. 我家里的苹果设备耗电快
@@ -76,7 +76,7 @@ IPV6并不需要您去固定设备的地址只需要在防火墙-通信规则里
 
 ### 12. 如何开启UPNP
 
-请确保您拥有公网IPV4地址的情况下在服务-UPNP里勾选 **启动 UPnP 与 NAT-PMP 服务** 
+请确保您拥有公网IPV4地址的情况下在服务-UPNP里勾选 **启动 UPnP 与 NAT-PMP 服务**
 
 > [!NOTE]
 > 启用之后列表里不显示已经打洞成功的程序属**正常现象**。
@@ -114,3 +114,9 @@ luci-proto-wireguard
 ### 17. 为什么我网络在使用BT/PCDN等应用时有时候会莫名其妙断流/变慢
 
 首先请检查你是否使用中兴7615v1等zxic方案的光猫，此类光猫在大连接的情况下需要更新光猫固件才能稳定桥接。然后检查你是否在使用中兴F6005/VSOL/HSGQ光猫，这种光猫使用的是RTL的300MHz单核MIPS CPU方案，无法支撑大连接数桥接。最后检查您获取到的IP是否为私网IP，在CGNAT的情况下，私网IP的连接数限制到3000。超过了连接数限制就会触发运营商的限速。
+
+### 18. 软件仓库镜像说明
+
+如果您的网络环境无法访问我们提供的链接，您可以使用以下镜像仓库。**请注意 ImmortalWrt 不对以下镜像源负责。**
+
+[ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrors.cernet.edu.cn/immortalwrt)
