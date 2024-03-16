@@ -71,7 +71,8 @@ luci-i18n-zerotier-zh-cn # zerotier
 插件名称的规律,带语言包的是：`luci-i18n-xxx-zh-cn`；不带语言包的是：`luci-app-xxx`，插件的依赖有能力的需要自己去查插件的`makefile`\
 举个例子：
 ```
-make image PACKAGES="luci-i18n-passwall-zh-cn luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"
+make image PACKAGES="luci-i18n-homeproxy-zh-cn luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"
 ```
-说明：800MB带passwall，不带8125驱动的x86-64固件\
+说明：800MB带homeproxy，不带8125驱动的x86-64固件\
+生成的固件位置一般在`/bin/targets/`或者是`/build_dir/`目录下\
 [immortalwrt插件清单](https://downloads.immortalwrt.org/releases/23.05.1/packages/x86_64/)内的`base` `luci` `pakcages`基本上包含了所需要的插件，在这三个里面找不到的就是没有。
