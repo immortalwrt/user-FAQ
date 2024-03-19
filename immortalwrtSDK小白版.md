@@ -2,7 +2,7 @@
 >参考文档：https://openwrt.org/docs/guide-developer/toolchain/using_the_sdk
 
 ### 使用前的准备
-Linux发行版：Ubuntu22.04桌面版（desktop），用虚拟机或者是物理机都行。\
+Linux发行版：Ubuntu22.04桌面版（desktop），用虚拟机或者是物理机都行。
 ### 需要安装的依赖
 ```
 sudo apt update -y
@@ -24,7 +24,7 @@ sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bis
 ```
 wget https://downloads.immortalwrt.org/releases/23.05.1/targets/x86/64/immortalwrt-sdk-23.05.1-x86-64_gcc-12.3.0_musl.Linux-x86_64.tar.xz
 ```
-### 解压文件后进入到SDK文件内
+### 解压文件后进入到SDK文件夹内
 ```
 tar -J -x -f immortalwrt-sdk-*.tar.xz
 ```
@@ -51,5 +51,5 @@ cd ..
 homeproxy里面有现成的`Makefile`。\
 可以使用`make menuconfig`命令进入菜单界面选择`luci-app-homeproxy` save（保存）后使用`make
 `命令将全部已选择的插件编译；也可以使用`make package/homeproxy/luci-app-homeproxy/compile V=s`
-### 编译生成的`.ipk`文件位置
+### 编译生成的`.ipk`文件位置目录
 `bin/packages` `bin/targets`
