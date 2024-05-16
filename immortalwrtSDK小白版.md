@@ -1,3 +1,4 @@
+**特别注意：本文用途只是教你用现成的源码编译出适合你设备架构或op版本的插件，想学怎么编译没有现成源码的插件直接略过本文**
 # **SDK是将你某个插件从源码编译成后缀为`.ipk`插件的工具，不能编译生成固件。**
 >参考文档：https://openwrt.org/docs/guide-developer/toolchain/using_the_sdk
 
@@ -48,8 +49,13 @@ git clone https://github.com/immortalwrt/homeproxy.git
 ```
 cd ..
 ```
+### 编译插件
 homeproxy里面有现成的`Makefile`。\
-可以使用`make menuconfig`命令进入菜单界面选择`luci-app-homeproxy` save（保存）后使用`make
-`命令将全部已选择的插件编译；也可以使用`make package/homeproxy/luci-app-homeproxy/compile V=s`
+可以使用`make menuconfig`命令进入菜单界面选择`luci-app-homeproxy` save（保存）后使用`make`命令编译
+
+```
+make package/homeproxy/luci-app-homeproxy/compile V=s
+```
+
 ### 编译生成的`.ipk`文件位置目录
 `bin/packages` `bin/targets`
