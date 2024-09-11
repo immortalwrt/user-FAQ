@@ -1,5 +1,5 @@
 **<sup>推荐</sup> 在线构建网址：(https://firmware-selector.immortalwrt.org 或 https://fwselector.kyarucloud.moe)**
-> 详细教程：(https://github.com/1715173329/blog/issues/9)
+> 详细教程：[ImmortalWrt 在线构建服务 使用说明](https://github.com/1715173329/blog/issues/9)
 
 在虚拟机（Linux物理机）内使用image builder编译生成的固件可以设置固件大小。 **必须在非ROOT环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、~~H28K~~ 等等）。** 
 >参考命令：https://github.com/openwrt/openwrt/blob/master/target/imagebuilder/files/Makefile \
