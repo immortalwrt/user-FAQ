@@ -1,7 +1,7 @@
 **<sup>推荐</sup> 在线构建网址：(https://firmware-selector.immortalwrt.org 或 https://fwselector.kyarucloud.moe)**
-> 详细教程：(https://github.com/1715173329/blog/issues/9）
+> 详细教程：[ImmortalWrt 在线构建服务 使用说明](https://github.com/1715173329/blog/issues/9)
 
-在虚拟机（Linux物理机）内使用image builder编译生成的固件可以设置固件大小。 **必须在非ROOT环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、H28K 等等）。** 
+在虚拟机（Linux物理机）内使用image builder编译生成的固件可以设置固件大小。 **必须在非ROOT环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、~~H28K~~ 等等）。** 
 >参考命令：https://github.com/openwrt/openwrt/blob/master/target/imagebuilder/files/Makefile \
 >参考文档：https://openwrt.org/docs/guide-user/additional-software/imagebuilder
 
@@ -76,3 +76,4 @@ make image PACKAGES="luci-i18n-homeproxy-zh-cn luci-i18n-base-zh-cn luci-i18n-op
 说明：800MB带homeproxy，不带8125驱动的x86-64固件\
 生成的固件位置一般在`/bin/targets/`或者是`/build_dir/`目录下\
 [immortalwrt插件清单](https://downloads.immortalwrt.org/releases/23.05.1/packages/x86_64/)内的`base` `luci` `pakcages`基本上包含了所需要的插件，在这三个里面找不到的就是没有。
+
