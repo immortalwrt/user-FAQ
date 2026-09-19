@@ -9,12 +9,13 @@
 在虚拟机（或 Linux 物理机）内使用 Image Builder 编译固件，**可以自己设置固件大小**。**必须在非 ROOT 环境下运行。** **主要适用于有大容量存储的设备（例如：X86、R2S、~~H28K~~ 等等）。**
 
 > 参考命令：<https://github.com/openwrt/openwrt/blob/master/target/imagebuilder/files/Makefile>
+>
 > 参考文档：<https://openwrt.org/docs/guide-user/additional-software/imagebuilder>
 
 > [!NOTE]
 > 本文以 **x86-64 + 23.05.1** 为例（下载链接里的版本号请按需替换）。24.10 及更新版本的官方产物是 `.tar.zst` 而不是 `.tar.xz`，解压命令不同，对照表见 [README](./README.md) 的「版本与命令对照」。
 
-## 1. 安装依赖（Ubuntu 22.04 举例）
+## 1. 安装依赖（以 Ubuntu 22.04 为例）
 
 只装 Image Builder 必需的部分：
 
@@ -97,20 +98,23 @@ image:
 make image PACKAGES="luci-i18n-base-zh-cn luci-i18n-opkg-zh-cn luci-i18n-firewall-zh-cn -kmod-r8125" ROOTFS_PARTSIZE="800"
 ```
 
-说明：双引号内是需要安装或删除的插件，**带 `-` 就是删除，不带就是增加**（例子里 `-kmod-r8125` 是删掉 8125 驱动）；`800` 表示 rootfs 分区大小 800MB（不严谨地说就是固件大小）。这条命令在虚拟机和 Linux 物理机内同样适用。
+说明：
+
+- 双引号内是需要安装或删除的插件，**带 `-` 就是删除，不带就是增加**（例子里 `-kmod-r8125` 是删掉 8125 驱动）；`800` 表示 rootfs 分区大小 800MB（不严谨地说就是固件大小）。这条命令在虚拟机和 Linux 物理机内同样适用。
+- 对于 24.10 及以上版本，`luci-app-opkg` 已更名为 `luci-app-package-manager`，上述 `luci-i18n-opkg-zh-cn` 需替换为 `luci-i18n-package-manager-zh-cn`
 
 **常用插件名称（带语言包）：**
 
 ```
-luci-i18n-homeproxy-zh-cn   # HP
-luci-i18n-diskman-zh-cn     # 磁盘管理
-luci-i18n-mwan3-zh-cn       # 多拨
-luci-i18n-nlbwmon-zh-cn     # 流量统计
-luci-i18n-samba4-zh-cn      # 文件共享
-luci-i18n-smartdns-zh-cn    # smartdns
-luci-i18n-transmission-zh-cn # BT or PT
-luci-i18n-upnp-zh-cn        # 公网映射
-luci-i18n-zerotier-zh-cn    # zerotier
+luci-i18n-homeproxy-zh-cn     # HomeProxy
+luci-i18n-diskman-zh-cn       # 磁盘管理
+luci-i18n-mwan3-zh-cn         # 多拨
+luci-i18n-nlbwmon-zh-cn       # 流量统计
+luci-i18n-samba4-zh-cn        # 文件共享
+luci-i18n-smartdns-zh-cn      # SmartDNS
+luci-i18n-transmission-zh-cn  # BT or PT
+luci-i18n-upnp-zh-cn          # 公网映射
+luci-i18n-zerotier-zh-cn      # ZeroTier
 ```
 
 插件名称的规律：**带语言包的是 `luci-i18n-xxx-zh-cn`，不带语言包的是 `luci-app-xxx`**；插件之间还有依赖关系，有能力的可以自己去查插件的 `Makefile`。

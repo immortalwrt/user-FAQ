@@ -1,4 +1,4 @@
-# immortalwrt 常见问题指北
+# ImmortalWrt 常见问题指北
 
 这是一篇常见问题指南，帮助你更好地使用 ImmortalWrt。
 
@@ -17,13 +17,13 @@
 
 ---
 
-### 1. 为什么我用不了 SSRP
+### 1. 为什么用不了 SSRP
 
 23.05 之后 ImmortalWrt 用 `nftables` 替换了 `iptables`，所以一些基于 `iptables` 的插件（如 SSRP、turbo-acc 等）无法使用。请改用 `homeproxy` 之类的替代方案。
 
-### 2. 我的 passwall 有问题
+### 2. 我的 PassWall 有问题
 
-PassWall 的使用问题不在本群的支持范围，请到 PassWall 社区获取帮助：[xiaorouji/openwrt-passwall/issues](https://github.com/xiaorouji/openwrt-passwall/issues)
+PassWall 的使用问题不在本群的支持范围，请到 PassWall 社区获取帮助：[Openwrt-Passwall/openwrt-passwall/issues](https://github.com/Openwrt-Passwall/openwrt-passwall/issues)
 
 ### 3. 我的设备莫名重启
 
@@ -102,14 +102,14 @@ IPv6 **不需要**你去固定设备的地址。只要设备用的是 EUI-64 后
 > [!TIP]
 > 在群里问任何有关 DNS 泄露的问题会被踢，望周知。
 
-### 12. 如何开启 UPnP
+### 12. 如何开启 UPnP？
 
 请确保你拥有公网 IPv4 地址，然后在 `服务 → UPnP` 里勾选 **启动 UPnP 与 NAT-PMP 服务**。
 
 > [!NOTE]
 > 启用之后列表里不显示已经打洞成功的程序属**正常现象**。
 
-### 13. 为什么我找不到 wireguard 了
+### 13. 为什么我找不到 wireguard 了？
 
 在新版本内核里，`luci-app-wireguard` 已被合并为内核模块，请在编译 / 构建时添加以下软件包：
 
@@ -146,14 +146,23 @@ apk update && apk add wireguard-tools kmod-wireguard luci-proto-wireguard
 > [!NOTE]
 > 如果更新软件包列表后也搜不到，那就说明确实不支持。另外也可以改用 `luci-app-ddns-go`（ddns-go 前端），它自带一批国内厂商的接口。
 
-### 16. i225/i226 网卡还会断流吗？
+### 16. 为什么 scp 命令报错？
+
+新版 OpenSSH 的 scp 默认使用 SFTP 协议，但 OpenWrt/ImmortalWrt 上的 Dropbear 自身无 SFTP 支持。
+
+解决方案（任选其一）：
+
+- 使用 `scp -O` 指定使用传统 SCP 协议
+- 在 ImmortalWrt 上安装 `openssh-sftp-server`
+
+### 17. i225/i226 网卡还会断流吗？
 
 这个问题已于 **23.05.0** 正式版开始被修复。
 
 > [!NOTE]
 > 如果你的设备（特别是四口的）网卡部分没有做差分等长布线，这个补丁将不对你起作用。我们收到的多数报告与这个问题有关。另外，网线质量也会造成"掉线"，遇到断流建议先换一根网线排除。
 
-### 17. 为什么我网络在使用 BT / PCDN 等应用时有时候会莫名其妙断流 / 变慢？
+### 18. 为什么我网络在使用 BT / PCDN 等应用时有时候会莫名其妙断流 / 变慢？
 
 按下面顺序排查：
 
@@ -161,14 +170,14 @@ apk update && apk add wireguard-tools kmod-wireguard luci-proto-wireguard
 2. 检查你是否在使用中兴 F6005 / VSOL / HSGQ 光猫 —— 这类光猫用的是 RTL 的 300MHz 单核 MIPS CPU 方案，无法支撑大连接数桥接；
 3. 检查你获取到的 IP 是否为私网 IP —— 在 CGNAT 的情况下，私网 IP 的连接数会被限制在 3000 左右，超过就会触发运营商限速。
 
-### 18. 软件仓库镜像说明
+### 19. 软件仓库镜像说明
 
 如果你的网络环境无法访问我们提供的链接，可以使用以下镜像仓库。**请注意 ImmortalWrt 不对以下镜像源负责。**
 
 - [ImmortalWrt 软件仓库镜像使用帮助 - MirrorZ Help](https://help.mirrorz.org/immortalwrt/)
 - [CERNET 镜像站 - ImmortalWrt](https://help.mirrors.cernet.edu.cn/immortalwrt/)
 
-### 19. 怎么在线升级固件（保留配置）？
+### 20. 怎么在线升级固件（保留配置）？
 
 ImmortalWrt 固件默认内置了 **Attended Sysupgrade**（中文菜单：`系统 → 值守式系统升级`）：它会把你当前的软件包清单发给构建服务器，现打一份带上这些包的固件，然后像普通 sysupgrade 一样刷入，**可以选择保留配置**。
 
