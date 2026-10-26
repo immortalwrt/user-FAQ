@@ -12,7 +12,6 @@
 | [immortalwrtSDK小白版](./immortalwrtSDK小白版.md) | 用 SDK 把某一个插件的源码单独编译成安装包 |
 | [toolchain加速编译](./toolchain加速编译.md) | 用官方预编译 toolchain 加速从源码编译固件 |
 | [关于eui64的一些说明](./关于eui64的一些说明.md) | EUI-64 地址怎么来的、为什么用它做 IPv6 端口转发 |
-| [PPPoE定时重拨与wan6无地址排查](./PPPoE定时重拨与wan6无地址排查.md) | 周期性断线怎么判断是不是运营商 BRAS 的问题；wan6 只有 PD 没有地址怎么排查 |
 
 ## 版本与命令对照（动手前先看这张表）
 
